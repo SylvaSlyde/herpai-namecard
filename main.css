@@ -111,6 +111,7 @@ img {
   font-size:25px;
   font-style:italic;
   font-family: Comic Sans MS;
+  text-align:center;
 }
 img:hover {
   transform: scale(0.5, 0.5);
