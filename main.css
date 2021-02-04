@@ -1,0 +1,119 @@
+/*
+.profile-card{
+  background:violet;
+}
+.head{
+  background: green;
+}
+.name{
+  background: blue;
+}
+.headline{
+  background: blue;
+}
+.content{
+  background: yellow;
+}
+.about, .about2, .links{
+  background: red;
+}
+/*CSS reset*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-size:100%;
+  }
+
+/*az oldal pozicionálása*/
+
+.profile-card{
+  width:480px;
+  max-width: calc(100vw - 10px);
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.profile-image{
+  text-align:left;
+}
+.head, .links{
+  text-align: center;
+}
+.head, .content{
+  font-size:20px;
+  font-weight: 800;
+  font-style:italic;
+  color:black;
+  width:90%;
+  margin:0 auto;
+  align-content: center;
+}
+h1{
+  font-size:50px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: Comic Sans MS;
+}
+h2{
+  font-weight: 600;
+  font-style: italic;
+  font-family: Comic Sans MS;
+}
+img{
+  width:270px;
+  height:450px; 
+  border-radius: 10%;
+}
+.profile-image {
+  margin-top: 70px;
+}
+/*contact links*/
+ul{
+  list-style-type:none;
+}
+li{
+  display:inline;
+}
+.head,.about{
+  margin-bottom:10%;
+}
+.content{
+  padding:5%10%;
+}
+body{
+  background: url('assets/IMG_4630.JPG')no-repeat center center fixed;
+  background-size:cover;
+}
+.profile-card {
+  background-color:hsla(50, 40%, 50%, .5);
+  border-radius: 20px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+  height: 75%;
+  width: 50%
+}
+img {
+  padding: 5px;
+  background-color: white;
+}
+.content {
+  border-top: 3px solid hsla(0, 0%, 30%, .8);
+}
+.about{
+  font-style: italic;
+  font-family: Comic Sans MS;
+  text-align:center;
+}
+.about2{
+  font-size:25px;
+  font-style:italic;
+  font-family: Comic Sans MS;
+}
+img:hover {
+  transform: scale(0.5, 0.5);
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(20%);
+}
