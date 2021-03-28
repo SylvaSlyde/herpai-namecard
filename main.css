@@ -1,9 +1,54 @@
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*====HELPER COLORS FOR LAYOUT====*/
+
 /*.profile-card{
-  background:violet;
+background:violet;
 }
-.head{
-  background: green;
-}
+
 .name{
   background: blue;
 }
@@ -16,19 +61,31 @@
 .about, .links{
   background: red;
 }
-/*CSS reset*/
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  font-size:100%;
-  }
 
 /*az oldal pozicionálása*/
 
+*{
+  box-sizing: border-box;
+}
+
 .profile-card{
-  width:1000px;
+  width: 33%;
   max-width: calc(100vw - 10px);
+  text-align: center;
+}
+@media (min-width:768px){
+  .profile-card{
+    width: 33%;
+    max-width: calc(100vw - 10px);
+    text-align: right;
+  }
+}
+@media (min-width:1025px){
+  .profile-card{
+    width:20%
+    max-width: calc(100vw - 10px);
+    text-align: center;
+  }
 }
 body{
   display:flex;
@@ -36,17 +93,33 @@ body{
   align-items: center;
   height: 100vh;
 }
-.head, .links{
+.head,.links{
   text-align: center;
 }
 .content{
-  font-size:25px;
+  font-size:1.5rem;
   font-weight: 800;
   font-style: italic;
   color: black;
-  width: 90%;
-  margin: 0 auto;
+  width: 33%;
+  margin: 0 auto 1rem;
   align-content: center;
+}
+@media(min-width:768px){
+  .content{
+    font-size:1rem;
+    width: 33%;
+    margin: 0 auto 1rem;
+    align-content: center;
+  }
+}
+@media(min-width:1025px){
+  .content{
+    font-size:1.5rem;
+    width: 33%;
+    margin: 0 auto 1rem;
+    align-content: center;
+  }
 }
 .head {
   font-size:20px;
@@ -56,6 +129,16 @@ body{
   width: 90%;
   margin: 0 auto;
   align-content: center;
+}
+@media(min-width:768px){
+  .head{
+    font-size:15px;
+  }
+}
+@media(min-width:1025px){
+  .head{
+    font-size:15px;
+  }
 }
 h1{
   font-size:50px;
@@ -74,8 +157,26 @@ img{
   border-radius: 10%;
 }
 .profile-image {
-  margin-top: 70px;
+  top:auto;
+  left:0;
+  width:33%;
+  height: 50.13vh;
 }
+ @media(min-width:768px){
+  .profile-image{
+   width:20%;
+   display: flex;
+   margin-right: 50px;
+  }
+}
+/*==== LAYOUT STLES====*/
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr, .container, .profile-image, .content{
+  margin-bottom: 1rem;
+}
+
 /*contact links*/
 ul{
   list-style-type:none;
@@ -99,7 +200,7 @@ img {
   background-color: white;
 }
 .content {
-  border-top: 3px solid hsla(0, 0%, 30%, .8);
+  border-top: 0.2192% solid hsla(0, 0%, 30%, .8);
 }
 .about{
   font-style: italic;
@@ -112,4 +213,48 @@ img:hover {
   transition: all 0.5s ease-in-out;
   filter: grayscale(20%);
 }
+nav{
+  width: 33%;
+  position: absolute;
+  top: 90%;
+  margin: auto;
+  font-size: 1rem;
+  color: black;
+}
+a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  color: black;
+  margin: 15px;
+  font-style: italic;
+  font-family: Comic Sans MS;
+}
 
+ @media(min-width:768px){
+  nav{
+    font-size:1rem;
+    width:33%;
+    margin: 0 auto 0.5rem;
+    align-content: center;
+  }
+}
+@media(min-width:1025px){
+  nav{
+    font-size:1rem;
+    width:33%;
+    margin: 0 auto 0.5rem;
+    align-content: center;  
+  }
+}
+@media(min-width:768px){
+  a{
+  padding: 0.5rem 0.5rem;
+  margin: 2px;
+  }
+}
+@media(min-width:1025px){
+  a{
+    padding: 0.5rem 0.5rem;
+    margin: 15px;
+  }
+}
