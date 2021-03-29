@@ -45,216 +45,201 @@ table {
 }
 /*====HELPER COLORS FOR LAYOUT====*/
 
-/*.profile-card{
+/*.container{
 background:violet;
 }
 
-.name{
+.header{
   background: blue;
 }
-.headline{
+.main{
   background: blue;
 }
-.content{
+.aside{
   background: yellow;
 }
-.about, .links{
+.footer{
   background: red;
 }
 
-/*az oldal pozicionálása*/
+/*====main header styles====*/
 
-*{
-  box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
-
-.profile-card{
-  width: 33%;
-  max-width: calc(100vw - 10px);
-  text-align: center;
-}
-@media (min-width:768px){
-  .profile-card{
-    width: 33%;
-    max-width: calc(100vw - 10px);
-    text-align: right;
+.container{
+  width: 80%;
+  max-width: calc(100vh-10px);
+  margin: 0 auto 1rem;
+  padding:1.25rem;
+  position: relative;
   }
-}
-@media (min-width:1025px){
-  .profile-card{
-    width:20%
-    max-width: calc(100vw - 10px);
-    text-align: center;
-  }
-}
 body{
-  display:flex;
+  background: url("assets/új háttér.jpg") no-repeat center center fixed;
+  background-size: cover;
+  line-height: 2rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.head,.links{
-  text-align: center;
-}
-.content{
-  font-size:1.5rem;
-  font-weight: 800;
-  font-style: italic;
-  color: black;
-  width: 33%;
-  margin: 0 auto 1rem;
-  align-content: center;
-}
-@media(min-width:768px){
-  .content{
-    font-size:1rem;
-    width: 33%;
-    margin: 0 auto 1rem;
-    align-content: center;
-  }
-}
-@media(min-width:1025px){
-  .content{
-    font-size:1.5rem;
-    width: 33%;
-    margin: 0 auto 1rem;
-    align-content: center;
-  }
-}
-.head {
-  font-size:20px;
-  font-weight: 800;
-  font-style: italic;
-  color: black;
-  width: 90%;
-  margin: 0 auto;
-  align-content: center;
-}
-@media(min-width:768px){
-  .head{
-    font-size:15px;
-  }
-}
-@media(min-width:1025px){
-  .head{
-    font-size:15px;
-  }
-}
-h1{
-  font-size:50px;
-  font-weight: 800;
-  font-style: italic;
-  font-family: Comic Sans MS;
-}
-h2{
-  font-weight: 600;
-  font-style: italic;
-  font-family: Comic Sans MS;
-}
-img{
-  width:270px;
-  height:300px; 
-  border-radius: 10%;
-}
-.profile-image {
-  top:auto;
-  left:0;
-  width:33%;
-  height: 50.13vh;
-}
- @media(min-width:768px){
-  .profile-image{
-   width:20%;
-   display: flex;
-   margin-right: 50px;
-  }
-}
-/*==== LAYOUT STLES====*/
-h1,h2,h3,h4,h5,h6,hgroup,
-ul,ol,dd,
-p,figure,
-pre,table,fieldset,hr, .container, .profile-image, .content{
-  margin-bottom: 1rem;
-}
-
-/*contact links*/
-ul{
-  list-style-type:none;
-}
-li{
-  display:inline;
-}
-.head,.about{
-  margin-bottom: 5%;
-}
-.content{
-  padding:10% 1%;
-}
-body{
-  background: url('assets/új háttér.jpg')no-repeat center center fixed;
-  background-size:cover;
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size:1.2rem;
+  font-weight: bold;
 }
 
 img {
-  padding: 5px;
-  background-color: white;
+  width:20%;
+  border-radius: 50%;
+  position:absolute;
+  top:-15vh;
+  right:2.5vw;
 }
-.content {
-  border-top: 0.2192% solid hsla(0, 0%, 30%, .8);
-}
-.about{
-  font-style: italic;
-  font-family: Comic Sans MS;
-  text-align: center;
+h1,
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size:2.125rem;
+  font-weight: bold;
+  color:black;
+  letter-spacing: 1rem;
+  line-height: 5rem;
 }
 
+/*====reszponziv====*/
+/*====Layout Styles====*/
+
+.header{
+  padding: 0;
+  color:black;
+  margin-top:-15vh;
+  height:33vw;
+}
+.main{
+  width: 95%;
+  margin-top:10%;
+  padding: 0.3125rem;
+  letter-spacing: 0.125rem;
+  text-align:center;
+}
+.aside{
+  width: 95%;
+}
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr,img, .header,.main,.aside,.footer{
+    margin-bottom: 1rem;
+}
+.aside, ul,li{
+  list-style-type:none;
+  display: inline;
+  border: 0.625rem;
+  border-radius: 0.625rem;
+  padding-right: 0.5375rem;
+  padding-left: 0.5375rem;
+  margin: 0.9375rem;
+  width: 95%;
+  font-family: 'Open Sans', sans-serif;
+}
+.aside:hover{
+  border: 1px solid #b60e63;
+}
+.footer{
+  display: inline-block;
+  border: 0.625rem;
+  padding: 0.625rem;
+  font-size: 1.7rem;
+  color: black;
+  margin-bottom: 1rem;
+}
 img:hover {
   transform: scale(0.5, 0.5);
   transition: all 0.5s ease-in-out;
   filter: grayscale(20%);
 }
-nav{
-  width: 33%;
-  position: absolute;
-  top: 90%;
-  margin: auto;
-  font-size: 1rem;
-  color: black;
+/*====media query====*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.main{
+  font-weight: bold;
+  }
+.header,.main,.aside,.footer{
+  width: 100%;
+  max-width: calc(100vh-0.625rem);
+  }
+  .aside,.footer{
+    display: inline;
+    font-size:1.2rem;
+  }
+  .header{
+    font-size:1.2rem;
+    position:absolute;
+    top:-30vh;
+  }
+  h1, h2{
+    font-size:1.2rem;
+  }
+  img {
+  width:30%;
+  border-radius: 50%;
+  position:absolute;
+  top: 5vh;
+  right:2.5vw;
+  float:right;
 }
-a {
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
-  color: black;
-  margin: 15px;
-  font-style: italic;
-  font-family: Comic Sans MS;
 }
 
- @media(min-width:768px){
-  nav{
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.main {
+  font-size:1.2rem;
+  line-height: 2rem;
+  font-weight: bold;
+
+  }
+.header,.main,.aside,.footer{
+  width: 100%;
+  max-width: calc(100vh-0.625rem);
+  }
+.aside,.footer{
+    display: inline;
     font-size:1rem;
-    width:33%;
-    margin: 0 auto 0.5rem;
-    align-content: center;
   }
+.header{
+    font-size:2.5rem;
+    position:absolute;
+    top:-30vh;
+  }
+  h1, h2{
+    font-size:3rem;
+  }
+  img {
+    width:20%;
+    border-radius: 50%;
+    position:absolute;
+    top: 5vh;
+    right:2.5vw;
+    float:right;
 }
-@media(min-width:1025px){
-  nav{
-    font-size:1rem;
-    width:33%;
-    margin: 0 auto 0.5rem;
-    align-content: center;  
-  }
 }
-@media(min-width:768px){
-  a{
-  padding: 0.5rem 0.5rem;
-  margin: 2px;
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main {
+    font-size:1.2rem;
+    line-height: 2rem;
+    font-family:  'Roboto Mono', monospace;
+    font-weight: bold;
+   
   }
+  img {
+    width:20%;
+    border-radius: 50%;
+    position:absolute;
+    top: 0vh;
+    right:2.5vw;
+    float:right;
 }
-@media(min-width:1025px){
-  a{
-    padding: 0.5rem 0.5rem;
-    margin: 15px;
-  }
 }
